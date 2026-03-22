@@ -1,0 +1,83 @@
+# YOLOv8 training configuration (Ultralytics format)
+# Docs: https://docs.ultralytics.com/usage/cfg/
+
+# ---- Task ----
+task: detect
+mode: train
+model: yolov8s.pt
+data: data/processed/dataset.yaml
+
+# ---- Training parameters ----
+epochs: 100
+patience: 50
+batch: 16
+imgsz: 640
+save: true
+save_period: 10
+device: 0
+workers: 4
+pretrained: true
+optimizer: SGD
+seed: 42
+deterministic: true
+single_cls: false
+rect: false
+cos_lr: false
+close_mosaic: 10
+resume: false
+amp: true
+fraction: 1.0
+profile: false
+overlap_mask: true
+mask_ratio: 4
+dropout: 0.0
+val: true
+plots: true
+
+# ---- Learning rate ----
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# ---- Loss gains ----
+box: 7.5
+cls: 0.5
+dfl: 1.5
+
+# ---- Augmentation ----
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+bgr: 0.0
+mosaic: 1.0
+mixup: 0.0
+copy_paste: 0.0
+erasing: 0.4
+crop_fraction: 1.0
+
+# ---- Detection thresholds (inference) ----
+conf: 0.5
+iou: 0.45
+max_det: 300
+agnostic_nms: false
+classes: 6
+
+# ---- Class names ----
+names:
+  0: Hello
+  1: Help
+  2: Home
+  3: No
+  4: Please
+  5: Yes
