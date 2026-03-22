@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Model weights
+*.pt
+*.onnx
+*.pth
+*.tflite
+weights/
+
+# Datasets (large files)
+data/raw/
+data/processed/
+data/external/
+*.csv
+*.zip
+*.tar.gz
+
+# Training runs
+runs/
+mlruns/
+wandb/
+lightning_logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Coverage
+htmlcov/
+.coverage
+.pytest_cache/
